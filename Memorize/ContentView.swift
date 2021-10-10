@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var emojis: [String] = ["✈️", "🚄", "🚘", "🚌", "🚎","🚜", "🚛", "🛻", "🛵", "🚲", "🚔", "🛺", "🚍", "🚡", "🚠", "🚟", "🚂", "🚀", "🛸", "🛳", "⛵️", "🚁", "🛴", "🦽"]
-    @State var emojiCount: Int = 4
+    @State var emojiCount: Int = 20
     
     var body: some View {
         VStack {
@@ -23,45 +23,45 @@ struct ContentView: View {
                 .foregroundColor(.red)
             }
             Spacer()
-            HStack {
-                removeCardButton
-                Spacer()
-                shuffleButton
-                Spacer()
-                addCardButton
-            }
-            .font(.largeTitle)
-            .padding(.horizontal)
+//            HStack {
+//                removeCardButton
+//                Spacer()
+//                shuffleButton
+//                Spacer()
+//                addCardButton
+//            }
+//            .font(.largeTitle)
+//            .padding(.horizontal)
         }
         .padding(.horizontal)
     }
     
-    var removeCardButton: some View {
-        Button(action: {
-            if emojiCount > 2 {
-                emojiCount -= 1
-            }
-        }, label: {
-            Image(systemName: "minus.circle")
-        })
-    }
-    
-    var addCardButton: some View {
-        Button(action: {
-            if emojiCount < emojis.count {
-                emojiCount += 1
-            }
-        }, label: {
-            Image(systemName: "plus.circle")
-        })
-    }
-    
-    var shuffleButton: some View {
-        Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-            Text("Shuffle")
-        })
-        .foregroundColor(.blue)
-    }
+//    var removeCardButton: some View {
+//        Button(action: {
+//            if emojiCount > 2 {
+//                emojiCount -= 1
+//            }
+//        }, label: {
+//            Image(systemName: "minus.circle")
+//        })
+//    }
+//
+//    var addCardButton: some View {
+//        Button(action: {
+//            if emojiCount < emojis.count {
+//                emojiCount += 1
+//            }
+//        }, label: {
+//            Image(systemName: "plus.circle")
+//        })
+//    }
+//
+//    var shuffleButton: some View {
+//        Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+//            Text("Shuffle")
+//        })
+//        .foregroundColor(.blue)
+//    }
 }
 
 struct CardView: View {
